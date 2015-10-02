@@ -99,7 +99,7 @@ angular.module("ngDraggable", [])
 
                 var isClickableElement = function (evt) {
                     return (
-                        angular.isDefined(angular.element(evt.target).attr("ng-cancel-drag"))
+                        angular.isDefined(angular.element(evt.target).closest("[ng-cancel-drag],[ng-drag]").attr("ng-cancel-drag"))
                     );
                 };
                 /*
